@@ -41,7 +41,7 @@ import org.junit.runner.RunWith;
 @RunAsClient
 public class SmokeIT {
 
-	private final Map<String, String> labels = Collections.singletonMap("project", "springboot-rest");
+	private final Map<String, String> labels = Collections.singletonMap("project", "springboot-testsuite-rest");
 
 	@ArquillianResource
 	OpenShiftHandle handle;

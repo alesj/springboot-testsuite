@@ -25,7 +25,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Obsidian Quickstarts
  */
 @SpringBootApplication
-public final class RestApplication {
+public class RestApplication {
 
 	private RestApplication() {
 	}
