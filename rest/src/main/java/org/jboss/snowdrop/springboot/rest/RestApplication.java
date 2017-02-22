@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright 2016-2017 Red Hat, Inc, and individual contributors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,26 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.obsidiantoaster.quickstart;
 
-import org.jboss.arquillian.container.test.api.RunAsClient;
-import org.jboss.arquillian.junit.Arquillian;
-import org.jboss.arquillian.test.api.ArquillianResource;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+package org.jboss.snowdrop.springboot.rest;
 
-@RunWith(Arquillian.class)
-@RunAsClient
-@Ignore
-public class OpenShiftIT {
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//    @ArquillianResource
-//    KubernetesClient client;
+/**
+ * Simple REST app.
+ *
+ * @author Obsidian Quickstarts
+ */
+@SpringBootApplication
+public final class RestApplication {
 
-    @Test
-    public void testAppProvisionsRunningPods() throws Exception {
-//        assertThat(client).deployments().pods().isPodReadyForPeriod();
-    }
+	private RestApplication() {
+	}
 
+	public static void main(String[] args) {
+		SpringApplication.run(RestApplication.class, args);
+	}
 }
