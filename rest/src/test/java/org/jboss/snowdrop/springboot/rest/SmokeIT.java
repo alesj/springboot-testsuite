@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.jboss.test.springboot.rest;
+package org.jboss.snowdrop.springboot.rest;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;

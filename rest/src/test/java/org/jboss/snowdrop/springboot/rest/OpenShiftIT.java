@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.jboss.test.springboot.rest;
+package org.jboss.snowdrop.springboot.rest;
 
 import org.jboss.arquillian.container.test.api.RunAsClient;
 import org.jboss.arquillian.junit.Arquillian;

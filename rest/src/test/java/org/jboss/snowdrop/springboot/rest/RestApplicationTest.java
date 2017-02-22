@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.jboss.test.springboot.rest;
+package org.jboss.snowdrop.springboot.rest;
 
 import org.jboss.snowdrop.springboot.rest.service.Greeting;
 import org.junit.Assert;
