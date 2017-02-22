@@ -123,6 +123,7 @@
                 <configuration>
                     <configLocation>springboot-checkstyle/checkstyle.xml</configLocation>
                     <headerLocation>springboot-checkstyle/checkstyle-header.txt</headerLocation>
+                    <suppressionsLocation>springboot-checkstyle/checkstyle-suppresions.xml</suppressionsLocation>
                     <consoleOutput>true</consoleOutput>
                     <failsOnError>true</failsOnError>
                     <includeTestSourceDirectory>true</includeTestSourceDirectory>
