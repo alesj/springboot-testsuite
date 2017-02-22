@@ -13,7 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.obsidiantoaster.quickstart;
+
+package org.jboss.test.springboot.rest;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
@@ -31,54 +32,60 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+/**
+ * Simple smoke test.
+ *
+ * @author Ales Justin
+ */
 @RunWith(Arquillian.class)
 @RunAsClient
 public class SmokeIT {
 
-    private final Map<String, String> labels = Collections.singletonMap("project", "springboot-rest");
+	private final Map<String, String> labels = Collections.singletonMap("project", "springboot-rest");
 
-    @ArquillianResource
-    OpenShiftHandle handle;
+	@ArquillianResource
+	OpenShiftHandle handle;
 
 //    @ArquillianResource
 //    OpenShiftClient client;
 
-    private void assertResponse(InputStream responseStream) throws Exception {
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        try {
-            int b;
-            while ((b = responseStream.read()) != -1) {
-                baos.write(b);
-            }
-        } finally {
-            responseStream.close();
-        }
-        String content = baos.toString();
-        System.out.println("Response: >>" + content + "<<");
-        Assert.assertTrue("Bad response: " + content, content.contains("SmokeIT") && content.contains("Hello"));
-    }
+	private void assertResponse(InputStream responseStream) throws Exception {
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		try {
+			int b;
+			while ((b = responseStream.read()) != -1) {
+				baos.write(b);
+			}
+		}
+		finally {
+			responseStream.close();
+		}
+		String content = baos.toString();
+		System.out.println("Response: >>" + content + "<<");
+		Assert.assertTrue("Bad response: " + content, content.contains("SmokeIT") && content.contains("Hello"));
+	}
 
-    @Test
-    @InSequence(1)
-    public void delay() throws Exception {
-        OpenShiftAdapter.class.cast(handle).delay(labels, 1, Operator.EQUAL);
-    }
+	@Test
+	@InSequence(1)
+	public void delay() throws Exception {
+		OpenShiftAdapter.class.cast(this.handle).delay(this.labels, 1, Operator.EQUAL);
+	}
 
-    @Test
-    @InSequence(2)
-    public void testPodsGreetingEndpoint() throws Exception {
-        InputStream responseStream = handle.execute(labels, 0, 8080, "/greeting?name=SmokeIT");
-        assertResponse(responseStream);
-    }
+	@Test
+	@InSequence(2)
+	public void testPodsGreetingEndpoint() throws Exception {
+		InputStream responseStream = this.handle.execute(this.labels, 0, 8080, "/greeting?name=SmokeIT");
+		assertResponse(responseStream);
+	}
 
-    @Test
-    @InSequence(3)
-    public void testPublicGreetingEndpoint() throws Exception {
+	@Test
+	@InSequence(3)
+	public void testPublicGreetingEndpoint() throws Exception {
 //        Route route = client.routes().get();
 //        System.out.println(route);
 //        RouteSpec spec = route.getSpec();
 //        URL url = new URL("http", spec.getHost(), spec.getPort().getTargetPort().getIntVal(), "/greeting?name=SmokeIT");
 //        assertResponse(url.openStream());
-    }
+	}
 
 }

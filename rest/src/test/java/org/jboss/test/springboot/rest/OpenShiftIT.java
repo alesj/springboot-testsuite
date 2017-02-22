@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright 2016-2017 Red Hat, Inc, and individual contributors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,28 +13,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.obsidiantoaster.quickstart.service;
 
-public class Greeting {
+package org.jboss.test.springboot.rest;
 
-    private final long id;
-    private final String content;
+import org.jboss.arquillian.container.test.api.RunAsClient;
+import org.jboss.arquillian.junit.Arquillian;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
-    public Greeting() {
-        this.id = 0;
-        this.content = null;
-    }
+/**
+ * Simple OpenShift test.
+ *
+ * @author Obsidian Quickstarts
+ */
+@RunWith(Arquillian.class)
+@RunAsClient
+@Ignore
+public class OpenShiftIT {
 
-    public Greeting(long id, String content) {
-        this.id = id;
-        this.content = content;
-    }
+//    @ArquillianResource
+//    KubernetesClient client;
 
-    public long getId() {
-        return id;
-    }
+	@Test
+	public void testAppProvisionsRunningPods() throws Exception {
+//        assertThat(client).deployments().pods().isPodReadyForPeriod();
+	}
 
-    public String getContent() {
-        return content;
-    }
 }

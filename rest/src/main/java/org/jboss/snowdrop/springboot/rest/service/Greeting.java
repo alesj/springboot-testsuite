@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright 2016-2017 Red Hat, Inc, and individual contributors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,15 +13,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.obsidiantoaster.quickstart;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+package org.jboss.snowdrop.springboot.rest.service;
 
-@SpringBootApplication
-public class RestApplication {
+/**
+ * Greeting dto.
+ *
+ * @author Obsidian Quickstarts
+ */
+public class Greeting {
 
-	public static void main(String[] args) {
-		SpringApplication.run(RestApplication.class, args);
+	private final long id;
+	private final String content;
+
+	public Greeting() {
+		this.id = 0;
+		this.content = null;
+	}
+
+	public Greeting(long id, String content) {
+		this.id = id;
+		this.content = content;
+	}
+
+	public long getId() {
+		return this.id;
+	}
+
+	public String getContent() {
+		return this.content;
 	}
 }
