@@ -43,6 +43,9 @@
     <ce-arq.version>1.0.1.Final-SNAPSHOT</ce-arq.version>
     <rest-assured.version>3.0.2</rest-assured.version>
 
+    <!-- Fabric8 Parameter to skip plugin execution -->
+    <fabric8.skip>true</fabric8.skip>
+
     <openshift.namespace/>
     <openshift.user/>
     <openshift.password/>
@@ -228,8 +231,29 @@
   <profiles>
     <profile>
       <id>login</id>
+<!--      <properties>
+        <script.lib>${org.jboss.snowdrop:springboot-testsuite-common:1.0.0-SNAPSHOT:jar}</script.lib>
+      </properties>
+      <dependencies>
+        <dependency>
+          <groupId>org.jboss.snowdrop</groupId>
+          <artifactId>springboot-testsuite-common</artifactId>
+        </dependency>
+      </dependencies>-->
       <build>
         <plugins>
+          <!-- Needed to copy the properties containing the path used by the exec plugin -->
+<!--          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>properties</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>-->
           <plugin>
             <!-- Log to OpenShift Platform -->
             <artifactId>exec-maven-plugin</artifactId>
@@ -241,7 +265,7 @@
                   <goal>exec</goal>
                 </goals>
                 <configuration>
-                  <executable>${basedir}/../script/oc-login.sh</executable>
+                  <executable>${basedir}/common/src/main/resources/script/oc-login.sh</executable>
                   <arguments>
                     <argument>-u ${openshift.user}</argument>
                     <argument>-p ${openshift.password}</argument>
@@ -262,10 +286,30 @@
           <plugin>
             <groupId>io.fabric8</groupId>
             <artifactId>fabric8-maven-plugin</artifactId>
+            <configuration>
+              <skip>${fabric8.skip}</skip>
+            </configuration>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>resource</goal>
+                  <goal>build</goal>
+                </goals>
+              </execution>
+            </executions>
           </plugin>
+
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-failsafe-plugin</artifactId>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>integration-test</goal>
+                  <goal>verify</goal>
+                </goals>
+              </execution>
+            </executions>
           </plugin>
         </plugins>
       </build>
