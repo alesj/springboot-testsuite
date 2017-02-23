@@ -193,7 +193,7 @@
           </dependency>
         </dependencies>
         <configuration>
-          <configLocation>springboot-checkstyle/checkstyle.xml</configLocation>
+          <configLocation>https://raw.githubusercontent.com/spring-projects/spring-boot/master/spring-boot-parent/src/checkstyle/checkstyle.xml</configLocation>
           <headerLocation>springboot-checkstyle/checkstyle-header.txt</headerLocation>
           <suppressionsLocation>springboot-checkstyle/checkstyle-suppresions.xml
           </suppressionsLocation>
