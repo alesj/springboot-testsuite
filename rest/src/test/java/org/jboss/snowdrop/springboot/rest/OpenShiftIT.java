@@ -16,8 +16,11 @@
 
 package org.jboss.snowdrop.springboot.rest;
 
+import io.fabric8.kubernetes.assertions.Assertions;
+import io.fabric8.kubernetes.client.KubernetesClient;
 import org.jboss.arquillian.container.test.api.RunAsClient;
 import org.jboss.arquillian.junit.Arquillian;
+import org.jboss.arquillian.test.api.ArquillianResource;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,12 +35,12 @@ import org.junit.runner.RunWith;
 @Ignore
 public class OpenShiftIT {
 
-//    @ArquillianResource
-//    KubernetesClient client;
+	@ArquillianResource
+	KubernetesClient client;
 
 	@Test
 	public void testAppProvisionsRunningPods() throws Exception {
-//        assertThat(client).deployments().pods().isPodReadyForPeriod();
+		Assertions.assertThat(this.client).deployments().pods().isPodReadyForPeriod();
 	}
 
 }
