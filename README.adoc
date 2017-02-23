@@ -25,7 +25,7 @@ mvn clean verify -Popenshift -Plogin -Dopenshift.user=admin \
 * Kubernetes ConfigMap for configuration
 * Health Check (OpenShift+Spring Boot Actuator)
 * Hystrix + Turbine Server to stream info reported by the Services Circuit Checked (= Hystrix Circuit Breaker pattern)
-* Zipkin (https://github.com/fabric8io/kubernetes-zipkin) till Hawkular (APM) + CloudForms are ready
+* Zipkin (https://github.com/fabric8io/kubernetes-zipkin) till Hawkular (APM) + CloudForms are ready / https://cloud.spring.io/spring-cloud-sleuth/
 * Logging (EFK)
 * Zuul --> On OpenShift : APi Manager + Apiman Gateway should be the way to go
 
