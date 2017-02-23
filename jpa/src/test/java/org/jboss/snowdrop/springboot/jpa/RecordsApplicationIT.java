@@ -35,7 +35,7 @@ import org.junit.runner.RunWith;
  */
 @RunAsClient
 @RunWith(Arquillian.class)
-public class RecordsApplicationIT /*extends AbstractRecordsApplicationTest*/ { // TODO add readiness probe before extending
+public class RecordsApplicationIT extends AbstractRecordsApplicationTest {
 
 	private static final String ROUTE_NAME = "springboot-jpa";
 
@@ -47,7 +47,7 @@ public class RecordsApplicationIT /*extends AbstractRecordsApplicationTest*/ { /
 		Assertions.assertThat(this.kubernetesClient).deployments().pods().isPodReadyForPeriod();
 	}
 
-//	@Override
+	@Override
 	protected URL getBaseUrl() throws MalformedURLException {
 		return OpenShiftUtils.getRouteUrl(this.kubernetesClient, ROUTE_NAME);
 	}
