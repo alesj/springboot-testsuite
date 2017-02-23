@@ -1,8 +1,15 @@
-# Spring Boot Testsuite
+:doctype: book
+:toc: left
+:toclevels: 3
+:toc-position: left
+:toc-title: Red Hat Microservices
+:numbered:
 
-## REST Service with Apache Tomcat
+= Spring Boot Testsuite
 
-* Component : [Spring Boot Starter Web](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-web), [Spring Boot Starter Web Tomcat](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-tomcat)
+== REST Service with Apache Tomcat
+
+* Component : Spring Boot Starter Web[https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-web], Spring Boot Starter Web Tomcat[https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-tomcat]
 * Framework : Spring Web, Spring Web MVC
 * Container : Apache Tomcat
 
@@ -11,7 +18,7 @@
 A REST endpoint is exposed by Spring Boot using as Java Web Container Apache Tomcat. The REST endpoint `/greeting` returns a message to say hello world with an id which is increment
 for each call.
 
-```
+----
 http http://localhost:8080/greeting
 HTTP/1.1 200 
 Content-Type: application/json;charset=UTF-8
@@ -22,11 +29,11 @@ Transfer-Encoding: chunked
     "content": "Hello, World!",
     "id": 1
 }
-```
+----
 
-## Access your data using a JDBC Driver
+== Access your data using a JDBC Driver
 
-* Component : [Spring Boot Starter Data JPA](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-data-jpa)
+* Component : Spring Boot Starter Data JPA[https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-data-jpa]
 * Framework : Hibernate
 
 **Description**
