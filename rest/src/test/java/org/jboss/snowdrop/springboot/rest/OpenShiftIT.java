@@ -16,6 +16,7 @@
 
 package org.jboss.snowdrop.springboot.rest;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 
 import io.fabric8.kubernetes.assertions.Assertions;
@@ -26,17 +27,20 @@ import org.hamcrest.core.IsEqual;
 import org.jboss.arquillian.container.test.api.RunAsClient;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.test.api.ArquillianResource;
+import org.jboss.snowdrop.common.OpenShiftUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * Simple OpenShift test.
+ * Simple Boot REST Test case.
  *
  * @author Obsidian Quickstarts
  */
 @RunWith(Arquillian.class)
 @RunAsClient
 public class OpenShiftIT {
+
+	private static final String ROUTE_NAME = "springboot-rest";
 
 	@ArquillianResource
 	KubernetesClient client;
@@ -47,11 +51,15 @@ public class OpenShiftIT {
 	}
 
 	@Test
-	public void should_get_HelloWorld(@ArquillianResource URL applicationPath) {
-		RestAssured.given().baseUri(applicationPath.toString()).
+	public void should_get_HelloWorld() throws Exception {
+		System.out.println("Address : " + String.valueOf(getBaseUrl()));
+		RestAssured.given().baseUri(String.valueOf(getBaseUrl())).
 			when().get("/greeting").
-			then().assertThat().body(Is.is(IsEqual.equalTo("Hello, World")));
+			then().assertThat().body(Is.is(IsEqual.equalTo("{\"id\":1,\"content\":\"Hello, World!\"}")));
 
 	}
 
+	protected URL getBaseUrl() throws MalformedURLException {
+		return OpenShiftUtils.getRouteUrl(this.client, ROUTE_NAME);
+	}
 }
