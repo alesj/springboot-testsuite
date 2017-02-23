@@ -18,9 +18,9 @@ package org.jboss.snowdrop.springboot.rest;
 
 import java.net.URL;
 
-import com.jayway.restassured.RestAssured;
 import io.fabric8.kubernetes.assertions.Assertions;
 import io.fabric8.kubernetes.client.KubernetesClient;
+import io.restassured.RestAssured;
 import org.hamcrest.core.Is;
 import org.hamcrest.core.IsEqual;
 import org.jboss.arquillian.container.test.api.RunAsClient;
