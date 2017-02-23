@@ -5,22 +5,7 @@
 
   <extension qualifier="kubernetes">
     <property name="env.config.url">file:${project.basedir}/target/classes/META-INF/fabric8/openshift.yml</property>
-  </extension>
-
-  <extension qualifier="ce-cube">
-    <property name="kubernetesNamespacePrefix">sb-</property>
-  </extension>
-
-  <!-- Example configuration for arquillian openshift extension -->
-  <extension qualifier="openshift">
-    <!-- Properties describing the location of the OpenShift instance.
-    <property name="originServer">https://your-ose-instance.com:8443</property>
-    <property name="namespace">test-namespace</property>
-    -->
-    <!-- The file containing the pod definition. Used to instantiate the JBoss instance. -->
-    <property name="definitionsFile">src/test/resources/dummy.yml</property>
-    <!-- Ports to be proxied locally, <container>:<port>
-    <property name="proxiedContainerPorts">testrunner:9999,testrunner:9990,testrunner:8080</property -->
+    <property name="namespace.use.existing">${openshift.namespace}</property>
   </extension>
 
 </arquillian>

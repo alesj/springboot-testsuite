@@ -38,6 +38,8 @@
         <fabric8.version>2.2.176</fabric8.version>
         <ce-arq.version>1.0.1.Final-SNAPSHOT</ce-arq.version>
 
+        <openshift.namespace/>
+
         <fabric8.maven.plugin.version>3.2.26</fabric8.maven.plugin.version>
         <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
         <maven-failsafe-plugin.version>2.19.1</maven-failsafe-plugin.version>
