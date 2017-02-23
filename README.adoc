@@ -8,7 +8,7 @@
 
 == REST Service with Apache Tomcat
 
-* Component : Spring Boot Starter Web[https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-web], Spring Boot Starter Web Tomcat[https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-tomcat]
+* Component : https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-web [Spring Boot Starter Web], https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-tomcat [Spring Boot Starter Web Tomcat]
 * Framework : Spring Web, Spring Web MVC
 * Container : Apache Tomcat
 
@@ -32,7 +32,7 @@ Transfer-Encoding: chunked
 
 == Access your data using a JDBC Driver
 
-* Component : Spring Boot Starter Data JPA[https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-data-jpa]
+* Component : https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-data-jpa [Spring Boot Starter Data JPA]
 * Framework : Hibernate
 
 **Description**
@@ -42,6 +42,6 @@ A Service class should be defined & contain CRUD methods. No transaction support
 
 References:
 
-- [Spring How To guide](https://spring.io/guides/gs/accessing-data-jpa/)
-- [Spring Boot doc](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html)
-- [DataSource configuration](http://blog.anthavio.net/2016/03/fun-with-spring-boot-auto-configuration.html)
+- https://spring.io/guides/gs/accessing-data-jpa [Spring How To guide]
+- https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html [Spring Boot doc]
+- http://blog.anthavio.net/2016/03/fun-with-spring-boot-auto-configuration.html [DataSource configuration]
