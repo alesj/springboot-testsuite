@@ -6,6 +6,8 @@
 
 = Spring Boot Testsuite
 
+== Instructions
+
 The command to be used to execute an Integration Test is :
 
 ----
