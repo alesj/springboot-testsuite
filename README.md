@@ -2,9 +2,9 @@
 
 ## REST Service with Apache Tomcat
 
-Component : [Spring Boot Starter Web](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-web), [Spring Boot Starter Web Tomcat](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-tomcat)
-Framework : Spring Web, Spring Web MVC
-Container : Apache Tomcat
+* Component : [Spring Boot Starter Web](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-web), [Spring Boot Starter Web Tomcat](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-tomcat)
+* Framework : Spring Web, Spring Web MVC
+* Container : Apache Tomcat
 
 **Description**
 
@@ -26,8 +26,8 @@ Transfer-Encoding: chunked
 
 ## Access your data using a JDBC Driver
 
-Component : [Spring Boot Starter Data JPA](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-data-jpa)
-Framework : Hibernate
+* Component : [Spring Boot Starter Data JPA](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-data-jpa)
+* Framework : Hibernate
 
 **Description**
 
