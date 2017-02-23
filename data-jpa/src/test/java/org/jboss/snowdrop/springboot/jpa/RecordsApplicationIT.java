@@ -37,7 +37,7 @@ import org.junit.runner.RunWith;
 @RunWith(Arquillian.class)
 public class RecordsApplicationIT extends AbstractRecordsApplicationTest {
 
-	private static final String ROUTE_NAME = "springboot-jpa";
+	private static final String ROUTE_NAME = "springboot-data-jpa";
 
 	@ArquillianResource
 	private KubernetesClient kubernetesClient;
