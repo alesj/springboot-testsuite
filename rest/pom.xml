@@ -40,6 +40,12 @@
       <artifactId>spring-boot-starter-tomcat</artifactId>
     </dependency>
 
+    <!-- Required by Arquillian CE Testing framework to check if the pod is alive -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-actuator</artifactId>
+    </dependency>
+
     <!-- Testing -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
