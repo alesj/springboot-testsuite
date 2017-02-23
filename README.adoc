@@ -2,7 +2,6 @@
 :toc: left
 :toclevels: 3
 :toc-position: left
-:toc-title: Red Hat Microservices
 :numbered:
 
 = Spring Boot Testsuite
