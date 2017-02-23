@@ -41,6 +41,22 @@ Transfer-Encoding: chunked
 }
 ----
 
+== REST Service with Apache Tomcat
+
+* Component : https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-tomcat[Spring Boot Starter Web Tomcat]
+* Framework : Apache CXF - 3.1.10
+* Container : Apache Tomcat
+
+This use case is based on the same logic as `REST Service with Apache Tomcat` but it uses as starter `Spring Boot Starter - Apache CXF`. To let
+Apache CXF to discover the services and register the REST application, the property `cxf -> jaxrs` has been added within the `application.properties`
+file in order to tell to the framework to discover and register the REST endpoints
+
+----
+cxf:
+  jaxrs:
+    component-scan: true
+----
+
 == Access your data using JPA
 
 * Component : https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-data-jpa[Spring Boot Starter Data JPA]

@@ -36,6 +36,8 @@
     <java.version>1.8</java.version>
 
     <springboot.version>1.4.1.RELEASE</springboot.version>
+    <springboot.cxf.version>3.1.10</springboot.cxf.version>
+
     <version.rest-assured>2.4.1</version.rest-assured>
     <fabric8.version>2.2.176</fabric8.version>
     <ce-arq.version>1.0.1.Final-SNAPSHOT</ce-arq.version>
@@ -97,6 +99,12 @@
         <groupId>org.jboss.snowdrop</groupId>
         <artifactId>springboot-testsuite-common</artifactId>
         <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-spring-boot-starter-jaxrs</artifactId>
+        <version>${springboot.cxf.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
