@@ -6,6 +6,15 @@
 
 = Spring Boot Testsuite
 
+The command to be used to execute an Integration Test is :
+
+----
+mvn clean verify -Popenshift -Plogin -Dopenshift.user=admin \
+                                     -Dopenshift.password=admin \
+                                     -Dopenshift.api=https://192.168.64.25:8443 \
+                                     -Dopenshift.namespace=test
+----
+
 == REST Service with Apache Tomcat
 
 * Component : https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-web[Spring Boot Starter Web], https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-tomcat[Spring Boot Starter Web Tomcat]
