@@ -8,7 +8,7 @@
 
 == REST Service with Apache Tomcat
 
-* Component : https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-web [Spring Boot Starter Web], https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-tomcat [Spring Boot Starter Web Tomcat]
+* Component : https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-web[Spring Boot Starter Web], https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-tomcat[Spring Boot Starter Web Tomcat]
 * Framework : Spring Web, Spring Web MVC
 * Container : Apache Tomcat
 
@@ -32,16 +32,16 @@ Transfer-Encoding: chunked
 
 == Access your data using a JDBC Driver
 
-* Component : https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-data-jpa [Spring Boot Starter Data JPA]
+* Component : https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-data-jpa[Spring Boot Starter Data JPA]
 * Framework : Hibernate
 
 **Description**
 
-The Test use case should be able to boot strap a Database in memory as H2, create some records using an import.sql file, the datasource to access the database should be defined. The use case will include 2 entities; a [CD Catalog](https://github.com/redhat-microservices/lab_swarm-openshift/blob/master/solution/cdservice/src/main/java/org/cdservice/model/Catalog.java) and TO BE DEFINED.
+The Test use case should be able to boot strap a Database in memory as H2, create some records using an import.sql file, the datasource to access the database should be defined. The use case will include 2 entities; a[CD Catalog](https://github.com/redhat-microservices/lab_swarm-openshift/blob/master/solution/cdservice/src/main/java/org/cdservice/model/Catalog.java) and TO BE DEFINED.
 A Service class should be defined & contain CRUD methods. No transaction support is required.
 
 References:
 
-- https://spring.io/guides/gs/accessing-data-jpa [Spring How To guide]
-- https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html [Spring Boot doc]
-- http://blog.anthavio.net/2016/03/fun-with-spring-boot-auto-configuration.html [DataSource configuration]
+- https://spring.io/guides/gs/accessing-data-jpa[Spring How To guide]
+- https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html[Spring Boot doc]
+- http://blog.anthavio.net/2016/03/fun-with-spring-boot-auto-configuration.html[DataSource configuration]
