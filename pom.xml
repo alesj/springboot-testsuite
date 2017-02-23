@@ -28,7 +28,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>SpringBoot Testsuite</name>
+    <name>SpringBoot Testsuite - Parent project</name>
     <description>SpringBoot Testsuite</description>
 
     <properties>
