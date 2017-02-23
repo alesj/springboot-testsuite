@@ -14,33 +14,21 @@
  * limitations under the License.
  */
 
-package org.jboss.snowdrop.springboot.rest.service;
+package org.jboss.snowdrop.springboot.rest.cxf;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Greeting dto.
+ * Simple REST app.
  *
  * @author Obsidian Quickstarts
  */
-public class Greeting {
+@SpringBootApplication
+public class RestApplication {
 
-	private final long id;
-	private final String content;
-
-	public Greeting() {
-		this.id = 0;
-		this.content = null;
+	public static void main(String[] args) {
+		SpringApplication.run(RestApplication.class, args);
 	}
 
-	public Greeting(long id, String content) {
-		this.id = id;
-		this.content = content;
-	}
-
-	public long getId() {
-		return this.id;
-	}
-
-	public String getContent() {
-		return this.content;
-	}
 }

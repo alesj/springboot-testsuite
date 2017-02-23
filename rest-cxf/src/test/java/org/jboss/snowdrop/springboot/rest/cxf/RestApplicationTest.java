@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.jboss.snowdrop.springboot.rest;
+package org.jboss.snowdrop.springboot.rest.cxf;
 
 import org.jboss.snowdrop.springboot.rest.cxf.service.Greeting;
 import org.junit.Assert;
