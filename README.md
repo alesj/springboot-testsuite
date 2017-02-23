@@ -1,8 +1,6 @@
-# Springboot Testsuite
+# Spring Boot Testsuite
 
-## Spring Boot Use cases
-
-### REST Service with Apache Tomcat
+## REST Service with Apache Tomcat
 
 Component : [Spring Boot Starter Web](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-web), [Spring Boot Starter Web Tomcat](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-tomcat)
 Framework : Spring Web, Spring Web MVC
@@ -26,7 +24,7 @@ Transfer-Encoding: chunked
 }
 ```
 
-### Data
+## Access your data using a JDBC Driver
 
 Component : [Spring Boot Starter Data JPA](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-data-jpa)
 Framework : Hibernate
