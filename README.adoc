@@ -41,7 +41,7 @@ Transfer-Encoding: chunked
 }
 ----
 
-== REST Service with Apache Tomcat
+== REST Service using Apache CXF
 
 * Component : https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-tomcat[Spring Boot Starter Web Tomcat]
 * Framework : Apache CXF - 3.1.10
