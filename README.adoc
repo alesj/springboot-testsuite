@@ -13,7 +13,7 @@ The command to be used to execute an Integration Test is :
 ----
 mvn clean verify -Popenshift -Plogin -Dopenshift.user=admin \
                                      -Dopenshift.password=admin \
-                                     -Dopenshift.api=https://192.168.64.25:8443 \
+                                     -Dopenshift.api=$(minishift console --url) \
                                      -Dopenshift.namespace=test
 ----
 
