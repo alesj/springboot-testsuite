@@ -30,6 +30,10 @@
   <name>SpringBoot Testsuite - REST</name>
   <description>SpringBoot Testsuite - REST</description>
 
+  <properties>
+    <fabric8.skip>false</fabric8.skip>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>

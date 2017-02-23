@@ -30,6 +30,10 @@
   <name>SpringBoot Testsuite - REST - Apache CXF</name>
   <description>SpringBoot Testsuite - REST - Apache CXF</description>
 
+  <properties>
+    <fabric8.skip>false</fabric8.skip>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
