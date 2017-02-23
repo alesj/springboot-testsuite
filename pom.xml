@@ -36,6 +36,7 @@
     <java.version>1.8</java.version>
 
     <springboot.version>1.4.1.RELEASE</springboot.version>
+    <version.rest-assured>2.4.1</version.rest-assured>
     <fabric8.version>2.2.176</fabric8.version>
     <ce-arq.version>1.0.1.Final-SNAPSHOT</ce-arq.version>
 
@@ -78,6 +79,13 @@
         <groupId>org.jboss.arquillian.container</groupId>
         <artifactId>arquillian-ce-fabric8</artifactId>
         <version>${ce-arq.version}</version>
+        <scope>test</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>com.jayway.restassured</groupId>
+        <artifactId>rest-assured</artifactId>
+        <version>${version.rest-assured}</version>
         <scope>test</scope>
       </dependency>
     </dependencies>

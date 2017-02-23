@@ -16,8 +16,13 @@
 
 package org.jboss.snowdrop.springboot.rest;
 
+import java.net.URL;
+
+import com.jayway.restassured.RestAssured;
 import io.fabric8.kubernetes.assertions.Assertions;
 import io.fabric8.kubernetes.client.KubernetesClient;
+import org.hamcrest.core.Is;
+import org.hamcrest.core.IsEqual;
 import org.jboss.arquillian.container.test.api.RunAsClient;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.test.api.ArquillianResource;
@@ -39,6 +44,14 @@ public class OpenShiftIT {
 	@Test
 	public void testAppProvisionsRunningPods() throws Exception {
 		Assertions.assertThat(this.client).deployments().pods().isPodReadyForPeriod();
+	}
+
+	@Test
+	public void should_get_HelloWorld(@ArquillianResource URL applicationPath) {
+		RestAssured.given().baseUri(applicationPath.toString()).
+			when().get("/greeting").
+			then().assertThat().body(Is.is(IsEqual.equalTo("Hello, World")));
+
 	}
 
 }
