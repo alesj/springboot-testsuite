@@ -30,15 +30,16 @@ Transfer-Encoding: chunked
 }
 ----
 
-== Access your data using a JDBC Driver
+== Access your data using JPA
 
 * Component : https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters/spring-boot-starter-data-jpa[Spring Boot Starter Data JPA]
 * Framework : Hibernate
 
 **Description**
 
-The Test use case should be able to boot strap a Database in memory as H2, create some records using an import.sql file, the datasource to access the database should be defined. The use case will include 2 entities; a[CD Catalog](https://github.com/redhat-microservices/lab_swarm-openshift/blob/master/solution/cdservice/src/main/java/org/cdservice/model/Catalog.java) and TO BE DEFINED.
-A Service class should be defined & contain CRUD methods. No transaction support is required.
+The goal of this use case is to setup a CRUD service talking to a H2 Database where the model is defined according to a https://github.com/redhat-microservices/lab_swarm-openshift/blob/master/solution/cdservice/src/main/java/org/cdservice/model/Catalog.java[CD Catalog entity].
+At run time, an in memory H2 database is created, some records imported using an import.sql file. The definition of the datasource is defined within the `application.proerpties or application.yml` file.
+A Service class will contain the CRUD methods. No transaction support is required.
 
 References:
 
