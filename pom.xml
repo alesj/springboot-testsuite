@@ -60,8 +60,8 @@
   </properties>
 
   <modules>
-    <module>rest</module>
     <module>rest-cxf</module>
+    <module>rest</module>
     <module>data-jpa</module>
     <module>common</module>
   </modules>
