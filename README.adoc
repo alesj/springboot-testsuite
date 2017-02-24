@@ -17,7 +17,7 @@ mvn clean verify -Popenshift -Plogin -Dopenshift.user=admin \
                                      -Dopenshift.namespace=test
 ----
 
-== Next use cases
+== Use cases to be investigated
 
 * Health Check (OpenShift+Spring Boot Actuator)
 * Kubernetes ConfigMap for configuration
