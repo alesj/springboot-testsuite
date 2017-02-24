@@ -19,15 +19,17 @@ mvn clean verify -Popenshift -Plogin -Dopenshift.user=admin \
 
 == Next use cases
 
-* Server-side load balancing (Kube/OpeShift).
+* Health Check (OpenShift+Spring Boot Actuator)
+* Kubernetes ConfigMap for configuration
+
+* Server-side load balancing (Kube/OpenShift).
 * Kubernetes/DNS for service registration/discovery (+ ribbon backed by Kube with one IP?)
   If multiple endpoints are registered, they will be used for loadbalancing by ribbon (https://github.com/fabric8io/spring-cloud-kubernetes#ribbon-discovery-in-kubernetes)
-* Kubernetes ConfigMap for configuration
-* Health Check (OpenShift+Spring Boot Actuator)
+
 * Hystrix + Turbine Server to stream info reported by the Services Circuit Checked (= Hystrix Circuit Breaker pattern)
 * Zipkin (https://github.com/fabric8io/kubernetes-zipkin) till Hawkular (APM) + CloudForms are ready / https://cloud.spring.io/spring-cloud-sleuth/
 * Logging (EFK)
-* Zuul --> On OpenShift : APi Manager + Apiman Gateway should be the way to go
+* Zuul : On OpenShift : APi Manager + Apiman Gateway should be the way to go
 
 == REST Service with Apache Tomcat
 
